@@ -85,13 +85,13 @@ public class InstrumentBoardView extends View {
         paint.setPathEffect(null);
 
         //画指针
-        float stopX = getWidth() / 2f - (float)(Math.cos(Math.toDegrees(ANGLE)) * POINTER_LENGTH);
-        float stopY = getHeight() / 2f - (float)(Math.sin(Math.toDegrees(ANGLE)) * POINTER_LENGTH);
+        float stopX = getWidth() / 2f - (float)(Math.cos(Math.toRadians(ANGLE)) * POINTER_LENGTH);
+        float stopY = getHeight() / 2f - (float)(Math.sin(Math.toRadians(ANGLE)) * POINTER_LENGTH);
         canvas.drawLine(getWidth() / 2 , getHeight() / 2 ,stopX , stopY , paint);
 
         //画指针2
-        float stopX2 = getWidth() / 2f - (float)(Math.cos(Math.toDegrees(ANGLE + 35)) * (POINTER_LENGTH + 10));
-        float stopY2 = getHeight() / 2f - (float)(Math.sin(Math.toDegrees(ANGLE + 35)) * (POINTER_LENGTH + 10));
+        float stopX2 = getWidth() / 2f - (float)(Math.cos(Math.toRadians(ANGLE + 90)) * (POINTER_LENGTH + 10));
+        float stopY2 = getHeight() / 2f - (float)(Math.sin(Math.toRadians(ANGLE + 90)) * (POINTER_LENGTH + 10));
         canvas.drawLine(getWidth() / 2 , getHeight() / 2 ,stopX2 , stopY2 , paint);
     }
 }
